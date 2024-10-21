@@ -1,5 +1,8 @@
 from binance.um_futures import UMFutures;
-api_key="MTXEJs8Qr2vGGS80cFPcQv3wGMp1lS34icsvAv6ViPVrh9uB8A33n8v1Oc59McKL"
+from config import Config
+co=Config()
+api_key=co.PC_API_KEY
+print(api_key)
 with open ("/home/litterpigger/.keypair/Private_key") as f:
     private_key=f.read()
 
@@ -10,6 +13,5 @@ params={
     'type':'MARKET',
      'quantity':4,
 }
-account_balance=client.new_order(**params);
-print(account_balance)
+print(client.get_open_orders(symbol="WLDUSDT"))
 
