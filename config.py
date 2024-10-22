@@ -22,6 +22,7 @@ class Config:
             sys.exit(1)
         self.PC_API_KEY=config.get(USER_CFG_SECTION,"PC_API_KEY")
         self.PC_SECRET_KEY=config.get(USER_CFG_SECTION,"PC_SECRET_KEY")
+        self.HP_API_KEY=config.get(USER_CFG_SECTION,"HP_API_KEY")
 
         
 
