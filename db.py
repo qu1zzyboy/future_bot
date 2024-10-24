@@ -8,9 +8,8 @@ class DB:
     def __init__(self):
         current_dictionary=os.path.abspath(os.getcwd())
         print(current_dictionary)
-        file_path=os.path.join(current_dictionary,"futureBot","binance_data")
+        file_path=os.path.join(current_dictionary,"futureBot","btc_data")
         self.files_path=glob.glob(os.path.join(file_path,"*.csv"))
-        self.db_path="wld.db"
     def db_init(self):
         dfs=[]
         for file in sorted(self.files_path):

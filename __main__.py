@@ -8,5 +8,6 @@ def main():
     config=Config()
     db=DB()
     combined_db=db.db_init()
-    db.export_to_csv(db.add_MACD(db.db_init()),'/home/litterpigger/projects/futureBot/format_data/format_data.csv')
+    print(combined_db.head())
+    db.export_to_csv(db.add_MACD(db.db_init()),'/home/litterpigger/myprojects/futureBot/format_data/BTC_format.csv')
 main()
