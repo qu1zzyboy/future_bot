@@ -3,7 +3,7 @@ from .config import Config
 config=Config()
 class Account:
     def __init__(self,config:Config):
-        self.client=UMFutures(key=config.PC_API_KEY,private_key=config.HP_SECRET_KEY)
+        self.client=UMFutures(key=config.HP_API_KEY,private_key=config.HP_SECRET_KEY)
     def open_order(self,config:Config):
         params = {
             'symbol': 'WLDUSDT',
@@ -45,7 +45,7 @@ class Account:
         response=self.client.new_order(**close_param)
         print(response)
 
-    def get_USDT(self):
+    def get_balance(self):
         balance=self.client.balance()
         account_balance={}
         for item in balance:
