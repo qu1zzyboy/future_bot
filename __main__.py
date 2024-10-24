@@ -3,5 +3,5 @@ from .account import Account
 def main():
     config=Config()
     account=Account(config)
-    account.get_USDT()
+    account.close_position(keypair=config.TRADING_PAIR[0])
 main()

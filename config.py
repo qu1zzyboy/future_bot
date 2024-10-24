@@ -30,7 +30,7 @@ class Config:
         self.PC_SECRET_KEY=config.get(USER_CFG_SECTION,"PC_SECRET_KEY")
         self.HP_API_KEY=config.get(USER_CFG_SECTION,"HP_API_KEY")
         self.WLD_AMOUNT=3
-        self.TRADING_PAIR="WLDUSDT"
+        self.TRADING_PAIR=["WLDUSDT"]
 
         
 
